@@ -15,7 +15,7 @@ props:
     <x-tw-table-heading>{{$header}}</x-tw-table-heading>
     @else
     <x-tw-table-heading :sortable="$header->isSortable()" multi-column :direction="$sortOrder"
-      wire:click="sortBy('{{ $header->sortBy }}')">
+      wire:click="sort('{{ $header->sortBy }}')">
       {{$header->title}}
     </x-tw-table-heading>
     @endif
